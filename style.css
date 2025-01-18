@@ -1,0 +1,271 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: black;
+}
+
+#main{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: relative;
+}
+
+#main #nav{
+    width: 100%;
+    height: 11dvh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3vw;
+}
+
+#nav .logo{
+}
+
+.logo svg{
+    width: 13vw;
+}
+
+#nav .menu{
+    display: flex;
+    gap: 3vw;
+    align-items: center;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.1vw;
+}
+
+.menu a:nth-last-child(1){
+    padding: 7px 14px;
+    border: 0.5px solid #000;
+    border-radius: 50px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu a:nth-last-child(1) h5{
+    color: #000;
+    position: relative;
+    display: flex;
+    gap: 10px;
+    font-weight: 500;
+    align-items: center;
+    z-index: 9999;
+}
+
+.menu a:nth-last-child(1) h5 svg{
+    width: 16px;
+}
+
+.menu a:nth-last-child(1) .green{
+    width: 100%;
+    height: 100%;
+    background-color: #00EB8F;
+    position: absolute;
+    top: 0%;
+    left: -100%;
+    transition: left 0.5s ease;
+}
+
+.menu a:nth-last-child(1):hover .green{
+    left: 0%;
+}
+.menu a:not(:last-child){
+    position: relative;
+    overflow: hidden;
+    z-index: 9999;
+}
+.menu a:not(:last-child)::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #00EB8F;
+    padding: 10px;
+    position: absolute;
+    top: 80%;
+    left: -200%;
+    transition: left 0.4s ease;
+
+}
+
+.menu a:not(:last-child):hover::after{
+    left: 0%;
+}
+
+.bannersection{
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.bannersection>h1{
+    font-size: 5vw;
+    font-weight: 500;
+    width: 60%;
+    text-align: center;
+    position: relative;
+    z-index: 9999;
+}
+
+.bannersection>h1::after{
+    content: "";
+    width: 22vw;
+    height: 3vh;
+    background-image: url("https://thisisdigital.co.uk/dist/images/underline-green.svg");
+    position: absolute;
+    bottom: -4%;
+    left: 31%;
+    transform: translate(10px, 10px);
+}
+
+.bannersection #img1{
+    position: absolute;
+    height: 60dvh;
+    left: 4%;
+    top: 18%;
+}
+
+.bannersection #img2{
+    position: absolute;
+    height: 27dvh;
+    right: 20%;
+    top: 13%;
+}
+
+.bannersection #img3{
+    position: absolute;
+    height: 33dvh;
+    right: 8%;
+    bottom: 16%;
+}
+
+.bannersection img{
+    transition: margin 0.7s ease;
+}
+
+.bannersection img:hover{
+    margin-top: -20px;
+}
+
+.bannersection #img3:hover{
+    margin-bottom: 20px;
+}
+
+.findoutmore a {
+    display: flex;
+    align-items: center;
+    margin: 4dvh 0dvh;
+    gap: 10px;
+    text-decoration: none;
+    color: #000;
+}
+.findoutmore span{
+    font-size: 1.2vw;
+}
+
+.findoutmore .arrowbtn{
+    display: flex;
+    align-items: center;
+    padding: 0.1em 1rem;
+    border: 0.5px solid #000;
+    border-radius: 50px;
+}
+.arrowbtn{
+    position: relative;
+    overflow: hidden;
+}
+.arrowbtn svg{
+    width: 20px;
+    z-index: 99999;
+}
+
+.arrowbtn .green{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00ff00;
+    top: 0%;
+    left: -100%;
+    transition: left 0.4s ease-in;
+}
+
+.findoutmore:hover .green{
+    left: 0%;
+    cursor: pointer;
+}
+
+.sectionabout{
+    width: 100%;
+    height: 60dvh;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+}
+
+.sectionabout h2, h5{
+    color: #fff;
+}
+
+.sectionabout h5{
+    font-size: 1.4vw;
+    font-weight: 400;
+    margin-bottom: 3dvh;
+}
+.sectionabout h2{
+    width: 60%;
+    font-size: 3vw;
+    text-align: center;
+    font-weight: 400;
+    position: relative;
+}
+
+
+.sectionabout .findoutmore a{
+    color: #fff;
+}
+
+.sectionabout .findoutmore .arrowbtn{
+    border: 0.5px solid #fff;
+}
+
+.sectionabout strong::after{
+    content: "";
+    width: 24%;
+    height: 44%;
+    background: url(https://thisisdigital.co.uk/dist/images/circle-green.svg);
+    position: absolute;
+    right: 49%;
+    bottom: -4%;
+}
+
+.sectionabout h5::before{
+    content: "";
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: #00eb8c;
+    border-radius: 50px;
+    left: -6%;
+    top: 20%;
+}
